@@ -1,0 +1,53 @@
+#scene{
+    width: 1200px;
+    height: 657px;
+    /*height: 400px;*/
+    background-color: rgb(120,120,120);
+    background-image: url(images/tlo.png);
+    position: relative;
+    top: 100px;
+    left: 10px;
+}
+
+.zarcie {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+}
+
+
+.bomba {
+    width: 20px;
+    height: 20px;
+    background-image: url(images/bomb.png);
+    position: absolute;
+}
+div#life{
+/*    height: 10px;*/
+/*float:right;*/
+
+height: 0px; border-width: 10px; border-image: url(images/pasek.png) 10 0 10 0;
+margin-left: 70px;
+}
+
+.granat{
+    /* background-color: red;*/
+    background-image: url(images/two.png);
+    position: absolute;
+}
+
+.cegla{
+    background-color: #333333;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0 0 0px 10px #333333;
+
+/*    border: solid 5px #333333;*/
+}
+.jewel{
+    background-color: #ff4444;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 0 0 0px 10px #ff3333;
+}
