@@ -175,7 +175,7 @@ gameLoop();
      $('#alien').css({'background-image': 'url(images/alien_l.png)','background-position': nnew+'px 0px', 'left': '-='+alien.stepLen});
    }
    
-  function dol(){
+  function down(){
    var current=$('#alien').css('background-position').split('p')[0];
    var whereIsAlienY=parseInt($('#alien').css('top').split('p')[0]);
    var whereIsAlienX=parseInt($('#alien').css('left').split('p')[0]);
@@ -206,12 +206,7 @@ gameLoop();
     }
    }
    
-   for( var i=0;i<jewels.length;i++ ){
-    if(conflict(parseInt(jewels[i].x),parseInt(jewels[i].y),parseInt(jewels[i].h),parseInt(jewels[i].h),whereIsAlienX,whereIsAlienY-15,parseInt(alien.WID),parseInt(alien.HEI))){
-    console.log("Mam jewel!");
-    rmvChild(jewels[i].p); jewels.splice(i,1); alien.points+=10; $('div#points > div').text(alien.points);
-     } 
-    } 
+   
    
    var nnew=newFrame(current);
    $('#alien').css({'background-position': nnew+'px 0px', 'top': '-='+alien.stepLen});
@@ -276,7 +271,7 @@ gameLoop();
     var alienTop=$('#alien').css('top').split('p')[0];
     var alienLeft=$('#alien').css('left').split('p')[0];
     if( (alien.direction.d && alien.direction.g) || (alien.direction.p && alien.direction.l) ){ setTimeout(gameLoop,150); };
-    if( alien.direction.d && alienTop<HEIGTH-alien.HEI ) {dol();};
+    if( alien.direction.d && alienTop<HEIGTH-alien.HEI ) {down();};
     if( alien.direction.p && alienLeft<=WIDTH-alien.WID ) {right();};
     if( alien.direction.g && alienTop>=alien.stepLen) {up();};
     if( alien.direction.l && alienLeft>=alien.stepLen ) {left();};
